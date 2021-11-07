@@ -1,0 +1,297 @@
+from selenium import webdriver
+import time
+driver = webdriver.Chrome(executable_path="chromedriver.exe")
+Doctor=[]
+Phone=[]
+Addresses=[]
+Specialists=[]
+for i in range(1,501):
+     a=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+
+     for i in a:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+
+for i in range(1,501):
+      b = driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+      for i in b:
+       Phone.append(i.text)
+       print(i.text)
+
+
+for i in range(1,501):
+      c = driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+      for i in c:
+       Addresses.append(i.text)
+       print(i.text)
+
+
+for i in range(1,501):
+      d = driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+      for i in d:
+       Specialists.append(i.text)
+       print(i.text)
+
+
+driver.get("https://www.justdial.com/ca/ON-Toronto/Nuclear-Medicine-Doctors/nct-1000430399")
+
+time.sleep(4)
+driver.find_element_by_xpath('//*[@id="srchbox"]').send_keys('Nuclear Medicine Doctors')
+driver.find_element_by_id('srch-icon')
+time.sleep(2)
+for i in range(1,143):
+    e=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in e:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+
+for i in range(1,143):
+    f=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+    for i in f:
+        Phone.append(i.text)
+        print(i.text)
+
+for i in range(1,143):
+    g=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in g:
+        Addresses.append(i.text)
+        print(i.text)
+
+for i in range(1,143):
+    h=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in h:
+        Specialists.append(i.text)
+        print(i.text)
+time.sleep(4)
+driver.get("https://www.justdial.com/ca/ON-Toronto/Cosmetic-Surgeons/nct-1000512351")
+time.sleep(2)
+for i in range(1,224):
+    k=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in k:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+for i in range(1,224):
+    l=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+    for i in l:
+        Phone.append(i.text)
+        print(i.text)
+for i in range(1,224):
+    m=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in m:
+        Addresses.append(i.text)
+        print(i.text)
+for i in range(1,224):
+    n=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in n:
+        Specialists.append(i.text)
+        print(i.text)
+
+time.sleep(1)
+driver.get("https://www.justdial.com/ca/ON-Toronto/Plastic-Surgeons/nct-1000965180")
+for i in range(1,365):
+    k=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in k:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+for i in range(1,365):
+    l=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a')
+    for i in l:
+        Phone.append(i.text)
+        print(i.text)
+for i in range(1,365):
+    m=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in m:
+        Addresses.append(i.text)
+        print(i.text)
+for i in range(1,365):
+    n=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in n:
+        Specialists.append(i.text)
+        print(i.text)
+
+driver.get('https://www.justdial.com/ca/ON-Toronto/Orthopedic-Surgeons/nct-1000965176')
+for i in range(1,497):
+    k=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in k:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+for i in range(1,497):
+    l=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+    for i in l:
+        Phone.append(i.text)
+        print(i.text)
+for i in range(1,497):
+    m=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in m:
+        Addresses.append(i.text)
+        print(i.text)
+for i in range(1,497):
+    n=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in n:
+        Specialists.append(i.text)
+        print(i.text)
+
+
+driver.get('https://www.justdial.com/ca/ON-Toronto/heart-surgeons/nct-1000965177')
+for i in range(1,201):
+    k=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in k:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+for i in range(1,201):
+    l=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+    for i in l:
+        Phone.append(i.text)
+        print(i.text)
+for i in range(1,201):
+    m=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in m:
+        Addresses.append(i.text)
+        print(i.text)
+for i in range(1,201):
+    n=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in n:
+        Specialists.append(i.text)
+        print(i.text)
+Phone.append('(705) 743-5763')
+
+
+driver.get('https://www.justdial.com/ca/ON-Toronto/Oral-Surgeons/nct-78737')
+for i in range(1,206):
+    k=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in k:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+for i in range(1,206):
+    l=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+    for i in l:
+        Phone.append(i.text)
+        print(i.text)
+for i in range(1,206):
+    m=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in m:
+        Addresses.append(i.text)
+        print(i.text)
+for i in range(1,206):
+    n=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in n:
+        Specialists.append(i.text)
+        print(i.text)
+Phone.append('(705) 743-5763')
+
+driver.get('https://www.justdial.com/ca/ON-Toronto/gastrointestinal-surgeons/nct-1000753140')
+for i in range(1,400):
+    k=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in k:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+for i in range(1,400):
+    l=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+    for i in l:
+        Phone.append(i.text)
+        print(i.text)
+for i in range(1,400):
+    m=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in m:
+        Addresses.append(i.text)
+        print(i.text)
+for i in range(1,400):
+    n=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in n:
+        Specialists.append(i.text)
+        print(i.text)
+Phone.append('(705) 743-5763')
+Phone.append('(705) 743-5763')
+Phone.append('(705) 743-5763')
+Phone.append('(705) 743-5763')
+Phone.append('(705) 743-5763')
+Phone.append('(705) 743-5763')
+Phone.append('(705) 743-5763')
+Phone.append('(705) 743-5763')
+Phone.append('(705) 743-5763')
+Phone.append('(705) 743-5763')
+
+
+
+driver.get('https://www.justdial.com/ca/ON-Toronto/Vascular-Surgeons/nct-1000526455')
+for i in range(1,134):
+    k=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in k:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+for i in range(1,134):
+    l=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+    for i in l:
+        Phone.append(i.text)
+        print(i.text)
+for i in range(1,134):
+    m=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in m:
+        Addresses.append(i.text)
+        print(i.text)
+for i in range(1,134):
+    n=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in n:
+        Specialists.append(i.text)
+        print(i.text)
+
+
+driver.get('https://www.justdial.com/ca/BC-Vancouver/Maxillofacial-Surgeons/nct-18030313')
+for i in range(1,186):
+    k=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in k:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+for i in range(1,186):
+    l=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+    for i in l:
+        Phone.append(i.text)
+        print(i.text)
+for i in range(1,186):
+    m=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in m:
+        Addresses.append(i.text)
+        print(i.text)
+for i in range(1,186):
+    n=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in n:
+        Specialists.append(i.text)
+        print(i.text)
+Phone.append('(905) 815-0999')
+Phone.append('(905) 815-0999')
+Phone.append('(905) 815-0999')
+Phone.append('(905) 815-0999')
+
+
+driver.get('https://www.justdial.com/ca/BC-Vancouver/kidney-surgeons/nct-1000965194')
+for i in range(1,337):
+    k=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/h2/a')
+    for i in k:
+        Doctor.append(i.text)
+        print(i.text)
+        time.sleep(1)
+for i in range(1,337):
+    l=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[2]/div/a/span')
+    for i in l:
+        Phone.append(i.text)
+        print(i.text)
+for i in range(1,337):
+    m=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[1]/span')
+    for i in m:
+        Addresses.append(i.text)
+        print(i.text)
+for i in range(1,337):
+    n=driver.find_elements_by_xpath(f'//*[@id="rsltPage"]/div[5]/div[2]/div[2]/ul/li{[i]}/div/div[2]/div[3]/div/span[2]/span/data-ng-show/a')
+    for i in n:
+        Specialists.append(i.text)
+        print(i.text)
